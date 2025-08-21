@@ -1,0 +1,9 @@
+.component-tittle {
+  color: #172b3b;
+  font-weight: 800 !important;
+  font-size: 24px !important;
+  line-height: 28px;
+  border-bottom: 1px solid #d1d2d4;
+  padding-bottom: 1rem;
+  width: 100%;
+}

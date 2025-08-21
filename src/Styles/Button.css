@@ -1,0 +1,122 @@
+.continue-btn {
+  border: none;
+  background-color: #0c8d2d;
+  color: white;
+  height: 38px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border-color: transparent;
+  color: #666666;
+  border-radius: 0px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Archivo', sans-serif;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 20px;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: none;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  z-index: 1;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 575px) {
+  .btn {
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+  }
+}
+
+.btn.btn-3 {
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  width: 75px;
+  height: 75px;
+  background-color: #000000;
+  border-radius: 50%;
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  z-index: -1;
+  opacity: 0.1;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn:focus,
+.btn:focus:active {
+  box-shadow: none;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.btn:hover::before {
+  width: 420px;
+  height: 420px;
+}
+
+@media only screen and (max-width: 575px) {
+  .btn-2 {
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+  }
+}
+
+.btn-primary {
+  background-color: #fc097c;
+  border-color: #fc097c;
+  color: #ffffff;
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: #fc097c;
+  border-color: #fc097c;
+}
+
+.btn-info {
+  background-color: #00acee;
+  border-color: #00acee;
+  color: #ffffff;
+}
+
+.btn-info:active,
+.btn-info:focus,
+.btn-info:hover {
+  background-color: #00acee;
+  border-color: #00acee;
+  color: #ffffff;
+}
+
+[class*='btn-outline-'] {
+  border: 2px solid transparent;
+  line-height: calc(50px + -2px);
+}
+
+@media only screen and (max-width: 575px) {
+  [class*='btn-outline-'] {
+    line-height: calc(45px + -2px);
+  }
+}
+
+[class*='btn-outline-']::before {
+  width: 0;
+  height: 0;
+}
