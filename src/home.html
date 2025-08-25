@@ -1,0 +1,96 @@
+<!doctype html>
+`;
+box.appendChild(el);
+});
+}
+
+
+function renderNews(){
+const grid = $('#newsGrid');
+grid.innerHTML = '';
+const [lead, ...rest] = demo.news;
+const leadEl = document.createElement('article');
+leadEl.className = 'news-card';
+leadEl.style.gridColumn = '1';
+leadEl.innerHTML = `
+<img alt="News thumbnail" src="${lead.img}" />
+<div>
+<h4>${lead.title}</h4>
+<p>${lead.text}</p>
+</div>`;
+grid.appendChild(leadEl);
+const side = document.createElement('div');
+side.style.display = 'grid';
+side.style.gap = '10px';
+rest.forEach(n=>{
+const el = document.createElement('article');
+el.className = 'news-card';
+el.innerHTML = <img alt="News thumbnail" src="${n.img}" /><div><h4>${n.title}</h4><p>${n.text}</p></div>;
+side.appendChild(el);
+});
+grid.appendChild(side);
+}
+
+
+function renderUpcoming(){
+const list = $('#upcomingList');
+list.innerHTML = '';
+demo.upcoming.forEach(u=>{
+const row = document.createElement('div');
+row.className = 'row';
+row.innerHTML = <span>${u.t}</span><span class="time">${u.time}</span>;
+list.appendChild(row);
+});
+}
+
+
+function renderRanks(){
+const tbody = $('#rankTable');
+tbody.innerHTML = '';
+demo.ranks.forEach(r=>{
+const tr = document.createElement('tr');
+tr.innerHTML = <td>#${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td>;
+tbody.appendChild(tr);
+});
+}
+
+
+// Tabs interaction
+$$('.tab').forEach(btn=>btn.addEventListener('click', e=>{
+$$('.tab').forEach(b=>{b.classList.remove('active'); b.setAttribute('aria-selected','false')});
+btn.classList.add('active');
+btn.setAttribute('aria-selected','true');
+renderMatches(btn.dataset.filter);
+}));
+
+
+// Theme toggle
+const toggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('cl-theme');
+if(savedTheme){ document.documentElement.setAttribute('data-theme', savedTheme); toggle.setAttribute('aria-pressed', savedTheme==='light'); }
+toggle.addEventListener('click', ()=>{
+const isLight = document.documentElement.getAttribute('data-theme')==='light';
+const next = isLight ? 'dark' : 'light';
+document.documentElement.setAttribute('data-theme', next);
+localStorage.setItem('cl-theme', next);
+toggle.setAttribute('aria-pressed', next==='light');
+});
+
+
+// Initial render
+renderLive();
+renderMatches('all');
+renderNews();
+renderUpcoming();
+renderRanks();
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+// Simulate live progression
+setInterval(()=>{
+demo.live = demo.live.map(m=>({ ...m, p: Math.min(100, m.p + Math.round(Math.random()*3)) }));
+renderLive();
+}, 5000);
+</script>
+</body>
+</html>
