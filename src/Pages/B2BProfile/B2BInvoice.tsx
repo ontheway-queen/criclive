@@ -16,7 +16,7 @@ const B2BInvoice = () => {
     try {
       (async () => {
         const res = await fetcher.get(
-          '/api/fair/visitor/get/single/visitor-invoice/by/11'
+          '/api/cric/visitor/get/single/visitor-invoice/by/11'
         );
 
         if (res.success) {

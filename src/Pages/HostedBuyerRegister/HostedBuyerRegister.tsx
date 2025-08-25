@@ -19,7 +19,7 @@ const HostedBuyerRegister = () => {
             <Col xs={12} md={6}>
               <div className='register-top mt-5 '>
                 <div className='hosted-visitor-top-div'>
-                  <div className='d-flex align-items-center justify-content-between'>
+                  <div className='d-flex align-items-center justify-content-betcricen'>
                     <h6>Particulars </h6>
                     <h6>Hosted Buyer Package Details</h6>
                   </div>
@@ -30,7 +30,7 @@ const HostedBuyerRegister = () => {
             <Col xs={12} md={6}>
               <div className='register-top mt-5 '>
                 <div className='hosted-visitor-top-div'>
-                  <div className='d-flex align-items-center justify-content-between'>
+                  <div className='d-flex align-items-center justify-content-betcricen'>
                     <h6>Particulars </h6>
                     <h6>Hosted Buyer Package Details</h6>
                   </div>

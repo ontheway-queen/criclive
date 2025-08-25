@@ -7,7 +7,7 @@ import { CgProfile } from 'react-icons/cg';
 import { BiLogOutCircle } from 'react-icons/bi';
 import { RiKeyLine } from 'react-icons/ri';
 import { BsFillSdCardFill } from 'react-icons/bs';
-import { RiWechatLine } from 'react-icons/ri';
+import { RicricchatLine } from 'react-icons/ri';
 import { ImLocation } from 'react-icons/im';
 import { BiUserCheck } from 'react-icons/bi';
 import { CgProductHunt } from 'react-icons/cg';
@@ -29,7 +29,7 @@ const Profile = () => {
   const { dispatch: VisitorAuthDispatch } = VisitorAuthContext();
   const location = useLocation();
   const handleLogout = () => {
-    destroyCookie(null, 'toab_fair');
+    destroyCookie(null, 'criclive_cric');
     authDispatch?.({
       type: AUTH_USER_FAILED,
     });
@@ -58,17 +58,17 @@ const Profile = () => {
                         width={350}
                         height={160}
                         style={{ objectFit: 'contain' }}
-                        src={`${imgUrl}/fair_member_files/${user.user_fair_member_company_logo}`}
+                        src={`${imgUrl}/cric_member_files/${user.user_cric_member_company_logo}`}
                         alt=''
                       />
                     </div>
                     <div className='pt-2'>
                       <p className='fs-5'>
-                        {user.user_fair_member_company_name}{' '}
+                        {user.user_cric_member_company_name}{' '}
                       </p>
                     </div>
                     <div className='pt-1'>
-                      <p>{user.user_fair_member_email} </p>
+                      <p>{user.user_cric_member_email} </p>
                     </div>
                   </div>
                 </div>
@@ -180,21 +180,21 @@ const Profile = () => {
                 </div>
                 <div className='profile-left-side mt-4 px-4 py-3 d-none d-md-block'>
                   <div className='text-center pb-3'>
-                    <RiWechatLine size={100} />
+                    <RicricchatLine size={100} />
                     <p className='fs-3 fw-800'>Need help?</p>
                   </div>
                   <div className='pt-2 ps-2 pb-4'>
                     <div>
                       <ImLocation />
                       <span className='ps-2'>
-                        105/E West Agargaon (2nd Floor), Agargaon Administrative
+                        105/E cricst Agargaon (2nd Floor), Agargaon Administrative
                         Area, Sher-E-Bangla Nagar, 60 Feet Road, Dhaka-1207,
                         Bangladesh.
                       </span>
                     </div>
                     <div className='py-3'>
                       <HiOutlineMailOpen />
-                      <span className='ps-2'>bttf@toab.org</span>
+                      <span className='ps-2'>bttf@criclive.org</span>
                     </div>
                     <div className=''>
                       <HiPhone />

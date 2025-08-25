@@ -29,7 +29,7 @@ const B2BEditProfile = () => {
 
     try {
       const res = await fetcher.put({
-        url: `/api/fair/member/b2b/${b2bUser.b2b_id}`,
+        url: `/api/cric/member/b2b/${b2bUser.b2b_id}`,
         body: formData,
       });
 
@@ -207,14 +207,14 @@ const B2BEditProfile = () => {
               </div>
               <div className='col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4'>
                 <div>
-                  <label className='col-form-label'>Website</label>
+                  <label className='col-form-label'>cricbsite</label>
                   <div>
                     <input
                       type='text'
-                      defaultValue={b2bUser.b2b_website}
+                      defaultValue={b2bUser.b2b_cricbsite}
                       className='form-control'
-                      placeholder='Website'
-                      {...register('b2b_website')}
+                      placeholder='cricbsite'
+                      {...register('b2b_cricbsite')}
                     />
                   </div>
                 </div>

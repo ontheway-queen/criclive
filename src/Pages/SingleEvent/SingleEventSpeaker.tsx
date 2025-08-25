@@ -9,7 +9,7 @@ const SingleEventSpeaker = ({ id }: any) => {
   const [speakers, setSpeakers] = useState<ISpeaker[]>([]);
   useEffect(() => {
     (async () => {
-      const res = await fetcher.get(`/api/fair/event/get/all/speaker/by/${id}`);
+      const res = await fetcher.get(`/api/cric/event/get/all/speaker/by/${id}`);
       console.log(res.data);
       if (res.success) {
         setSpeakers(res.data);

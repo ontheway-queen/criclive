@@ -22,7 +22,7 @@ const B2BProfileHomePage = () => {
   return (
     <div>
       <div className='profile-right-side px-3 py-3'>
-        <div className='d-flex  align-items-center justify-content-between'>
+        <div className='d-flex  align-items-center justify-content-betcricen'>
           <h4 className='component-tittle'>Profile Information</h4>
         </div>
         <div className='profile-right-info pt-3 ps-2'>
@@ -84,9 +84,9 @@ const B2BProfileHomePage = () => {
             ) : (
               ''
             )}
-            {user?.b2b_website ? (
+            {user?.b2b_cricbsite ? (
               <li>
-                <span>Website</span> : <p>{user?.b2b_website}</p>
+                <span>cricbsite</span> : <p>{user?.b2b_cricbsite}</p>
               </li>
             ) : (
               ''

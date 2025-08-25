@@ -21,9 +21,9 @@ const EventList = () => {
   useEffect(() => {
     setLoading(true);
     try {
-      let url = `/api/fair/event/get/all/all`;
+      let url = `/api/cric/event/get/all/all`;
       if (searchValue) {
-        url = `/api/fair/event/get/${searchValue}/all`;
+        url = `/api/cric/event/get/${searchValue}/all`;
       }
       (async () => {
         const res = await fetcher.get(url);
@@ -49,7 +49,7 @@ const EventList = () => {
           }}
         >
           <Container>
-            <div className='section-title breadcrumb-card d-flex flex-mo-column align-items-center  justify-content-between'>
+            <div className='section-title breadcrumb-card d-flex flex-mo-column align-items-center  justify-content-betcricen'>
               <div className='text-start w-50'>
                 <h2 className='mb-0'>All Events </h2>
               </div>

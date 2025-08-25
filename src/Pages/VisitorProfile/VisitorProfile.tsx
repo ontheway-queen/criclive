@@ -37,7 +37,7 @@ const VisitorProfile = () => {
   const { visitorUser, dispatch: VisitorAuthDispatch } = VisitorAuthContext();
 
   const handleLogout = () => {
-    destroyCookie(null, 'toab_fair');
+    destroyCookie(null, 'criclive_cric');
     authDispatch?.({
       type: AUTH_USER_FAILED,
     });
@@ -59,7 +59,7 @@ const VisitorProfile = () => {
 
     try {
       const res = await fetch(
-        `${BaseUrl}/api/fair/visitor/visitor-info-update`,
+        `${BaseUrl}/api/cric/visitor/visitor-info-update`,
         {
           method: 'PUT',
           body: formData,
@@ -142,7 +142,7 @@ const VisitorProfile = () => {
                   </div>
                 </div>
                 <div className='flex-grow-1 mt-3 mt-sm-5'>
-                  <div className='pt-1 gap-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-center align-items-sm-start align-items-md-end mx-4'>
+                  <div className='pt-1 gap-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-betcricen align-items-center align-items-sm-start align-items-md-end mx-4'>
                     <div className='user-profile-info'>
                       <h4 className='mb-4 fw-bold'>
                         {visitorUser?.visitor_first_name}{' '}

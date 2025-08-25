@@ -24,18 +24,18 @@ const VisitorAuthContextProvider = ({
 
   useEffect(() => {
     (async () => {
-      const { toab_fair } = parseCookies();
+      const { criclive_cric } = parseCookies();
 
-      if (toab_fair) {
+      if (criclive_cric) {
         setIsLoading(true);
         try {
           const { payload } = await jose.jwtVerify(
-            toab_fair,
+            criclive_cric,
             new TextEncoder().encode('FaTO5b$eCzw!Ukw8^d*UUf*JABbeIrR')
           );
 
           const { data } = await fetcher.get(
-            `/api/fair/visitor/get/single/visitor/${payload.visitor_id}`
+            `/api/cric/visitor/get/single/visitor/${payload.visitor_id}`
           );
 
           dispatch({ type: AUTH_VISITOR_USER_SUCCESS, payload: data });

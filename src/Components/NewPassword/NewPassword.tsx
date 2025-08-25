@@ -37,10 +37,10 @@ const NewPassword = () => {
       return;
     }
     data.email = email;
-    data.token = localStorage.getItem('fair_forget_token');
+    data.token = localStorage.getItem('cric_forget_token');
 
     const res = await fetcher.post({
-      url: '/api/auth/fair-member/forget/password',
+      url: '/api/auth/cric-member/forget/password',
       contentType: 'application/json',
       body: data,
     });
@@ -50,7 +50,7 @@ const NewPassword = () => {
         icon: 'success',
         title: res.message,
       });
-      localStorage.removeItem('fair_forget_token');
+      localStorage.removeItem('cric_forget_token');
       navigate('/login');
       setLoading(false);
     } else {

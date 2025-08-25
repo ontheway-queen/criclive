@@ -23,7 +23,7 @@ const ContactPerson = ({ companyProfileReg, register }: any) => {
                     type='text'
                     required
                     className='form-control '
-                    {...register('user_fair_member_contact_name')}
+                    {...register('user_cric_member_contact_name')}
                     placeholder='Contact Name'
                   />
                 </div>
@@ -40,7 +40,7 @@ const ContactPerson = ({ companyProfileReg, register }: any) => {
                     defaultValue={representativeDesignation}
                     required
                     type='text'
-                    {...register('user_fair_member_contact_designation')}
+                    {...register('user_cric_member_contact_designation')}
                     className='form-control '
                     placeholder='Designation'
                   />
@@ -57,7 +57,7 @@ const ContactPerson = ({ companyProfileReg, register }: any) => {
                   <input
                     required
                     type='number'
-                    {...register('user_fair_member_contact_number')}
+                    {...register('user_cric_member_contact_number')}
                     className='form-control col-sm-2 custom_input_field '
                     placeholder='Contact Number'
                   />
@@ -74,7 +74,7 @@ const ContactPerson = ({ companyProfileReg, register }: any) => {
                   <input
                     required
                     type='email'
-                    {...register('user_fair_member_contact_email')}
+                    {...register('user_cric_member_contact_email')}
                     className='form-control '
                     placeholder='Contact Email'
                   />

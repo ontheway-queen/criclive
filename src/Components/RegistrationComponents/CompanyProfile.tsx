@@ -22,7 +22,7 @@ const CompanyProfile = ({
 
               <input
                 type='text'
-                {...register('user_fair_member_company_name')}
+                {...register('user_cric_member_company_name')}
                 defaultValue={companyName}
                 className='form-control'
                 required
@@ -38,7 +38,7 @@ const CompanyProfile = ({
                 <textarea
                   className='form-control '
                   id='address'
-                  {...register('user_fair_member_company_address')}
+                  {...register('user_cric_member_company_address')}
                   defaultValue={address}
                   required
                   placeholder='Enter company address'
@@ -54,7 +54,7 @@ const CompanyProfile = ({
                 <div className='w-150-100'>
                   <input
                     required
-                    {...register('user_fair_member_company_city')}
+                    {...register('user_cric_member_company_city')}
                     type='text'
                     className='form-control '
                     placeholder='Enter city'
@@ -72,7 +72,7 @@ const CompanyProfile = ({
                   <input
                     required
                     type='number'
-                    {...register('user_fair_member_company_zip')}
+                    {...register('user_cric_member_company_zip')}
                     className='form-control '
                     placeholder='Enter zip code'
                   />
@@ -83,15 +83,15 @@ const CompanyProfile = ({
             <div className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-2'>
               <div className='row'>
                 <label>
-                  Web Address <span className='require'>*</span>
+                  cricb Address <span className='require'>*</span>
                 </label>
                 <div className='w-150-100'>
                   <input
                     required
                     type='text'
                     className='form-control '
-                    {...register('user_fair_member_company_website')}
-                    placeholder='Enter company web address'
+                    {...register('user_cric_member_company_cricbsite')}
+                    placeholder='Enter company cricb address'
                   />
                 </div>
               </div>
@@ -109,7 +109,7 @@ const CompanyProfile = ({
                     required
                     type='text'
                     className='form-control'
-                    {...register('user_fair_member_company_telephone')}
+                    {...register('user_cric_member_company_telephone')}
                     defaultValue={mobileNumber}
                     placeholder='Enter company telephone'
                   />
@@ -127,7 +127,7 @@ const CompanyProfile = ({
                     required
                     type='email'
                     defaultValue={email}
-                    {...register('user_fair_member_company_email')}
+                    {...register('user_cric_member_company_email')}
                     className='form-control '
                     placeholder='Comapny email'
                   />

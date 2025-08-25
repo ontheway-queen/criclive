@@ -11,7 +11,7 @@ const ProfileHomepage = () => {
     <>
       {toggle ? (
         <div className='profile-right-side px-3 py-3 mb-2'>
-          <div className='d-flex align-items-center justify-content-between'>
+          <div className='d-flex align-items-center justify-content-betcricen'>
             <h5>Edit profile information</h5>
             <div
               onClick={() => setToggle(false)}
@@ -29,7 +29,7 @@ const ProfileHomepage = () => {
         </div>
       ) : (
         <div className='profile-right-side px-3 py-3 mb-2'>
-          <div className='d-flex align-items-center justify-content-between'>
+          <div className='d-flex align-items-center justify-content-betcricen'>
             <h5>Basic Information</h5>
             <div
               onClick={() => setToggle(true)}
@@ -56,16 +56,16 @@ const ProfileHomepage = () => {
               <ul>
                 <li>
                   <span>Company name</span> :{' '}
-                  <p>{user.user_fair_member_company_name}</p>
+                  <p>{user.user_cric_member_company_name}</p>
                 </li>
 
                 <li>
                   <span>Telephone</span> :{' '}
-                  <p>{user.user_fair_member_company_telephone}</p>
+                  <p>{user.user_cric_member_company_telephone}</p>
                 </li>
                 <li>
-                  <span>Web address</span> :{' '}
-                  <p>{user.user_fair_member_company_website}</p>
+                  <span>cricb address</span> :{' '}
+                  <p>{user.user_cric_member_company_cricbsite}</p>
                 </li>
               </ul>
             </div>
@@ -76,14 +76,14 @@ const ProfileHomepage = () => {
               <ul>
                 <li>
                   <span>Address</span> :{' '}
-                  <p>{user.user_fair_member_company_address} </p>
+                  <p>{user.user_cric_member_company_address} </p>
                 </li>
                 <li>
                   <span>City</span> :{' '}
-                  <p>{user.user_fair_member_company_city}</p>
+                  <p>{user.user_cric_member_company_city}</p>
                 </li>
                 <li>
-                  <span>Zip</span> : <p>{user.user_fair_member_company_zip}</p>
+                  <span>Zip</span> : <p>{user.user_cric_member_company_zip}</p>
                 </li>
               </ul>
             </div>
@@ -94,19 +94,19 @@ const ProfileHomepage = () => {
               <ul>
                 <li>
                   <span>Contact name</span> :{' '}
-                  <p>{user.user_fair_member_contact_name}</p>
+                  <p>{user.user_cric_member_contact_name}</p>
                 </li>
                 <li>
                   <span>Designation</span> :{' '}
-                  <p>{user.user_fair_member_contact_designation}</p>
+                  <p>{user.user_cric_member_contact_designation}</p>
                 </li>
                 <li>
                   <span>Mobile</span> :{' '}
-                  <p>{user.user_fair_member_contact_number}</p>
+                  <p>{user.user_cric_member_contact_number}</p>
                 </li>
                 <li>
                   <span>Email</span> :{' '}
-                  <p>{user.user_fair_member_contact_email}</p>
+                  <p>{user.user_cric_member_contact_email}</p>
                 </li>
               </ul>
             </div>

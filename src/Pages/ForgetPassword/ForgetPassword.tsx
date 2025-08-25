@@ -16,7 +16,7 @@ const ForgetPassword = () => {
 
   const onSubmit = async (data: any) => {
     setLoading(true);
-    data.type = 'forget_fair';
+    data.type = 'forget_cric';
     const res = await fetcher.post({
       url: '/api/atab/common/send-email-otp',
       contentType: 'application/json',

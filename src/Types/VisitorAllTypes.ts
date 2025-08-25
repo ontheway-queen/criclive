@@ -26,7 +26,7 @@ export interface IVisitorUser {
   visitor_profession?: string;
   visitor_organization?: string;
   visitor_designation?: string;
-  visitor_website?: string;
+  visitor_cricbsite?: string;
   visitor_address?: string;
   visitor_city?: string;
   visitor_facebook?: string;
@@ -34,8 +34,8 @@ export interface IVisitorUser {
   visitor_zip_code?: string;
 }
 export interface IAllRegisterEvent {
-  fair_event_joined_id: number;
-  fair_event_id: number;
+  cric_event_joined_id: number;
+  cric_event_id: number;
   event_title: string;
   event_venu: string;
   event_date: string;

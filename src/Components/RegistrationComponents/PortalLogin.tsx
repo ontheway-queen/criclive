@@ -25,7 +25,7 @@ const PortalLogin = ({ register, setConfirmPassword }: any) => {
                   <input
                     required
                     type='email'
-                    {...register('user_fair_member_email')}
+                    {...register('user_cric_member_email')}
                     className='form-control '
                     placeholder='Enter email'
                   />
@@ -42,7 +42,7 @@ const PortalLogin = ({ register, setConfirmPassword }: any) => {
                   <input
                     type={passwordType}
                     id='password'
-                    {...register('user_fair_member_password')}
+                    {...register('user_cric_member_password')}
                     className='form-control error'
                     placeholder='Password'
                   />

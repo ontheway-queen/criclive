@@ -1,8 +1,8 @@
-import { ReportHandler } from 'web-vitals';
+import { ReportHandler } from 'cricb-vitals';
 
-const reportWebVitals = (onPerfEntry?: ReportHandler) => {
+const reportcricbVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    import('cricb-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
       getFID(onPerfEntry);
       getFCP(onPerfEntry);
@@ -12,4 +12,4 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   }
 };
 
-export default reportWebVitals;
+export default reportcricbVitals;

@@ -131,7 +131,7 @@
 .header-action button {
   font-family: 'Big Shoulders Display', cursive;
   font-size: 16px;
-  font-weight: 700;
+  font-cricight: 700;
   color: #ffffff;
   background-color: transparent;
   border: 0;
@@ -191,7 +191,7 @@
   font-family: 'Big Shoulders Display', cursive;
   font-size: 16px;
   text-decoration: none;
-  font-weight: 700;
+  font-cricight: 700;
   color: black;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -203,7 +203,7 @@
   content: '\f16c' !important;
   font-family: 'flaticon';
   font-size: 12px;
-  font-weight: 500;
+  font-cricight: 500;
   color: #ffffff;
   margin-left: 5px;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -309,7 +309,7 @@
   z-index: 91;
   background-color: #311a79;
   border-bottom-color: #311a79;
-  -webkit-animation: sticky 1s;
+  -cricbkit-animation: sticky 1s;
   animation: sticky 1s;
 }
 
@@ -319,7 +319,7 @@
 
 .meeta-header-2 .header-middle .header-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-betcricen;
   align-items: center;
 }
 
@@ -332,7 +332,7 @@
 }
 
 .meeta-header-2 .header-middle .header-wrap .header-navigation .sub-menu li a {
-  font-weight: 600;
+  font-cricight: 600;
 }
 
 .meeta-header-2
@@ -464,7 +464,7 @@
   border-radius: 5px;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-@-webkit-keyframes sticky {
+@-cricbkit-keyframes sticky {
   0% {
     transform: translateY(-100%);
   }

@@ -48,7 +48,7 @@ const VisitorRegister = () => {
           type: AUTH_VISITOR_USER_SUCCESS,
           payload: res.data,
         });
-        setCookie(null, 'toab_fair', res.token);
+        setCookie(null, 'criclive_cric', res.token);
         setIsLoading?.(false);
         navigate('/visitor/profile');
       } else {
@@ -107,7 +107,7 @@ const VisitorRegister = () => {
                     type={passwordType}
                   />
                 </div>
-                <div className=' pt-3 d-flex align-items-center justify-content-between'>
+                <div className=' pt-3 d-flex align-items-center justify-content-betcricen'>
                   <div className=' d-flex align-items-center'>
                     <input
                       type='checkbox'

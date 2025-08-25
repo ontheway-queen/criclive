@@ -16,36 +16,36 @@ const EditProfile = () => {
 
   const onSubmit = async (data: any) => {
     // setLoading(true);
-    data.user_fair_member_company_id = user.user_fair_member_company_id;
-    data.user_fair_member_company_name = user.user_fair_member_company_name;
+    data.user_cric_member_company_id = user.user_cric_member_company_id;
+    data.user_cric_member_company_name = user.user_cric_member_company_name;
 
-    data.user_fair_member_company_website =
-      data.user_fair_member_company_website ||
-      user.user_fair_member_company_website;
+    data.user_cric_member_company_cricbsite =
+      data.user_cric_member_company_cricbsite ||
+      user.user_cric_member_company_cricbsite;
 
-    data.user_fair_member_company_telephone =
-      data.user_fair_member_company_telephone ||
-      user.user_fair_member_company_telephone;
+    data.user_cric_member_company_telephone =
+      data.user_cric_member_company_telephone ||
+      user.user_cric_member_company_telephone;
 
-    data.user_fair_member_company_address =
-      data.user_fair_member_company_address ||
-      user.user_fair_member_company_address;
+    data.user_cric_member_company_address =
+      data.user_cric_member_company_address ||
+      user.user_cric_member_company_address;
 
-    data.user_fair_member_company_city =
-      data.user_fair_member_company_city || user.user_fair_member_company_city;
+    data.user_cric_member_company_city =
+      data.user_cric_member_company_city || user.user_cric_member_company_city;
 
-    data.user_fair_member_company_email =
-      data.user_fair_member_company_email || user.user_fair_member_email;
+    data.user_cric_member_company_email =
+      data.user_cric_member_company_email || user.user_cric_member_email;
 
-    data.user_fair_member_company_zip =
-      data.user_fair_member_company_zip || user.user_fair_member_company_zip;
+    data.user_cric_member_company_zip =
+      data.user_cric_member_company_zip || user.user_cric_member_company_zip;
 
-    data.user_fair_member_company_logo =
-      companyLogo || user.user_fair_member_company_logo;
+    data.user_cric_member_company_logo =
+      companyLogo || user.user_cric_member_company_logo;
     const formData = new FormData();
 
     if (companyLogo) {
-      formData.append('user_fair_member_company_logo', companyLogo);
+      formData.append('user_cric_member_company_logo', companyLogo);
     }
     Object.keys(data).forEach((key) => {
       if (data[key] === 'object') {
@@ -56,7 +56,7 @@ const EditProfile = () => {
 
     try {
       const res = await fetcher.put({
-        url: '/api/fair/member/update/fair-member-company-information',
+        url: '/api/cric/member/update/cric-member-company-information',
         body: formData,
       });
       console.log(res);
@@ -69,9 +69,9 @@ const EditProfile = () => {
         dispatch?.({
           type: USER_PROFILE_UPDATE,
           payload: {
-            user_fair_member_company_logo: res.user_fair_member_company_logo
-              ? res.user_fair_member_company_logo
-              : user.user_fair_member_company_logo,
+            user_cric_member_company_logo: res.user_cric_member_company_logo
+              ? res.user_cric_member_company_logo
+              : user.user_cric_member_company_logo,
           },
         });
         setLoading(false);
@@ -110,20 +110,20 @@ const EditProfile = () => {
                     id='company_name'
                     className='form-control  '
                     disabled
-                    value={user.user_fair_member_company_name}
+                    value={user.user_cric_member_company_name}
                   />
                 </div>
               </div>
               <div className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-3'>
                 <label className='control-label'>
-                  Web Address<span className='require'>*</span>
+                  cricb Address<span className='require'>*</span>
                 </label>
                 <div className='col-lg-12 padding_right_0'>
                   <input
                     type='text'
-                    placeholder='Web Address'
-                    {...register('user_fair_member_company_website')}
-                    defaultValue={user.user_fair_member_company_website}
+                    placeholder='cricb Address'
+                    {...register('user_cric_member_company_cricbsite')}
+                    defaultValue={user.user_cric_member_company_cricbsite}
                     className='form-control'
                   />
                 </div>
@@ -139,9 +139,9 @@ const EditProfile = () => {
                     type='text'
                     placeholder='Company Email '
                     id='company_email'
-                    {...register('user_fair_member_company_email')}
+                    {...register('user_cric_member_company_email')}
                     className='form-control '
-                    defaultValue={user.user_fair_member_email}
+                    defaultValue={user.user_cric_member_email}
                   />
                 </div>
               </div>
@@ -154,9 +154,9 @@ const EditProfile = () => {
                     type='text'
                     placeholder='Company Telephone '
                     id='telephone'
-                    {...register('user_fair_member_company_telephone')}
+                    {...register('user_cric_member_company_telephone')}
                     className='form-control '
-                    defaultValue={user.user_fair_member_company_telephone}
+                    defaultValue={user.user_cric_member_company_telephone}
                   />
                 </div>
               </div>
@@ -204,7 +204,7 @@ const EditProfile = () => {
                             }}
                             className=' ls-is-cached lazyloaded'
                             id='uploadedImage'
-                            src={`${imgUrl}/fair_member_files/${user.user_fair_member_company_logo}`}
+                            src={`${imgUrl}/cric_member_files/${user.user_cric_member_company_logo}`}
                             alt=''
                           />
                         )}
@@ -246,8 +246,8 @@ const EditProfile = () => {
                 <div className='col-sm-12'>
                   <textarea
                     className='form-control'
-                    {...register('user_fair_member_company_address')}
-                    defaultValue={user.user_fair_member_company_address}
+                    {...register('user_cric_member_company_address')}
+                    defaultValue={user.user_cric_member_company_address}
                   ></textarea>
                 </div>
               </div>
@@ -261,8 +261,8 @@ const EditProfile = () => {
                   <input
                     type='text'
                     className='form-control'
-                    {...register('user_fair_member_company_city')}
-                    defaultValue={user.user_fair_member_company_city}
+                    {...register('user_cric_member_company_city')}
+                    defaultValue={user.user_cric_member_company_city}
                     placeholder='Enter City name'
                   />
                 </div>
@@ -273,9 +273,9 @@ const EditProfile = () => {
                   <input
                     type='number'
                     className='form-control'
-                    {...register('user_fair_member_company_zip')}
+                    {...register('user_cric_member_company_zip')}
                     placeholder='Zip'
-                    defaultValue={user.user_fair_member_company_zip}
+                    defaultValue={user.user_cric_member_company_zip}
                   />
                 </div>
               </div>

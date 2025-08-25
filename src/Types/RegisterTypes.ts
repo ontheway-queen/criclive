@@ -34,10 +34,10 @@ export interface ICompanyProfileInfoRegister {
 }
 
 export interface IStalls {
-  fair_stall_id: number;
-  fair_stall_name: string;
-  fair_stall_hall_no: number;
-  fair_stall_type: string;
-  fair_stall_hall_name: string;
-  fair_stall_available_status: string;
+  cric_stall_id: number;
+  cric_stall_name: string;
+  cric_stall_hall_no: number;
+  cric_stall_type: string;
+  cric_stall_hall_name: string;
+  cric_stall_available_status: string;
 }

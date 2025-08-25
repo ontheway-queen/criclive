@@ -11,7 +11,7 @@ const VisitorProfileHomePage = () => {
   useEffect(() => {
     (async () => {
       const res = await fetcher.get(
-        `/api/fair/visitor/get/single/visitor/${visitorUser.visitor_id}`
+        `/api/cric/visitor/get/single/visitor/${visitorUser.visitor_id}`
       );
       if (res.success) {
         setUser(res.data);
@@ -22,7 +22,7 @@ const VisitorProfileHomePage = () => {
   return (
     <div>
       <div className='profile-right-side px-3 py-3'>
-        <div className='d-flex  align-items-center justify-content-between'>
+        <div className='d-flex  align-items-center justify-content-betcricen'>
           <h4 className='component-tittle'>Profile Information</h4>
           {/* <div className='d-flex  align-items-center gap-1'>
             <p>Edit</p> <FiEdit />

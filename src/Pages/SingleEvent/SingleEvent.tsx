@@ -30,7 +30,7 @@ const SingleEvent = () => {
     setLoading(true);
     try {
       (async () => {
-        const res = await fetcher.get(`/api/fair/event/get/single/${id}`);
+        const res = await fetcher.get(`/api/cric/event/get/single/${id}`);
         console.log(res);
         if (res.success) {
           setSingleEvent(res.data);
@@ -50,11 +50,11 @@ const SingleEvent = () => {
       if (b2bUser?.b2b_id) {
         try {
           const res = await fetcher.post({
-            url: `/api/fair/event/join/b2b`,
+            url: `/api/cric/event/join/b2b`,
             contentType: 'application/json',
             body: {
-              fair_event_joined_b2b_id: b2bUser.b2b_id,
-              fair_event_id: id,
+              cric_event_joined_b2b_id: b2bUser.b2b_id,
+              cric_event_id: id,
             },
           });
 
@@ -75,11 +75,11 @@ const SingleEvent = () => {
       } else if (visitorUser?.visitor_id) {
         try {
           const res = await fetcher.post({
-            url: `/api/fair/event/join/visitor`,
+            url: `/api/cric/event/join/visitor`,
             contentType: 'application/json',
             body: {
-              fair_event_joined_visitor_id: visitorUser?.visitor_id,
-              fair_event_id: id,
+              cric_event_joined_visitor_id: visitorUser?.visitor_id,
+              cric_event_id: id,
             },
           });
 

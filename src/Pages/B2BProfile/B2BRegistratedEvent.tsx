@@ -27,7 +27,7 @@ const B2BRegisteredEvents = () => {
     try {
       (async () => {
         const res = await fetcher.get(
-          `/api/fair/event/join/b2b/${b2bUser?.b2b_id}`
+          `/api/cric/event/join/b2b/${b2bUser?.b2b_id}`
         );
 
         if (res.success) {
@@ -45,7 +45,7 @@ const B2BRegisteredEvents = () => {
   const handelCancelEvent = async () => {
     try {
       const res = await fetcher.delete(
-        `/api/fair/event/delete/b2b/${b2bUser?.b2b_id}/${eventId}`
+        `/api/cric/event/delete/b2b/${b2bUser?.b2b_id}/${eventId}`
       );
       if (res.success) {
         Toast.fire({
@@ -53,7 +53,7 @@ const B2BRegisteredEvents = () => {
           title: res.message,
         });
         const filterData = allRegisterEvents.filter(
-          (sEvent: any) => sEvent.fair_event_id !== eventId
+          (sEvent: any) => sEvent.cric_event_id !== eventId
         );
         setAllRegisterEvents(filterData);
         setEventId(0);
@@ -96,7 +96,7 @@ const B2BRegisteredEvents = () => {
                       return (
                         <tr
                           className='text-center'
-                          key={sRegisterEvent.fair_event_id}
+                          key={sRegisterEvent.cric_event_id}
                         >
                           <td>
                             {moment(sRegisterEvent.event_date).format(
@@ -116,9 +116,9 @@ const B2BRegisteredEvents = () => {
                           </td>
                           <td>{sRegisterEvent.event_title}</td>
                           <td>{sRegisterEvent.event_venu}</td>
-                          <td>{sRegisterEvent.fair_event_joined_b2b_status}</td>
+                          <td>{sRegisterEvent.cric_event_joined_b2b_status}</td>
                           <td>
-                            {sRegisterEvent.fair_event_joined_b2b_status ===
+                            {sRegisterEvent.cric_event_joined_b2b_status ===
                             'approved' ? (
                               <>
                                 <TiTick
@@ -132,7 +132,7 @@ const B2BRegisteredEvents = () => {
                                 <IoIosCloseCircleOutline
                                   onClick={() => {
                                     handleShow();
-                                    setEventId(sRegisterEvent.fair_event_id);
+                                    setEventId(sRegisterEvent.cric_event_id);
                                   }}
                                   color='red'
                                   size={25}

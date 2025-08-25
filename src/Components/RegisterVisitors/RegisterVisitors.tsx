@@ -28,7 +28,7 @@ const RegisterVisitors = () => {
     try {
       (async () => {
         const res = await fetcher.get(
-          `/api/fair/member/get/visitor-of-member/by/${user.user_fair_member_id}/all`
+          `/api/cric/member/get/visitor-of-member/by/${user.user_cric_member_id}/all`
         );
         console.log(res.data);
         if (res.success) {
@@ -41,13 +41,13 @@ const RegisterVisitors = () => {
     } catch (error) {
       setLoading(false);
     }
-  }, [user.user_fair_member_id]);
+  }, [user.user_cric_member_id]);
   const handleAddVisitor = async () => {
     // Function to refetch data after posting new data
     setLoading(true);
     try {
       const res = await fetcher.get(
-        `/api/fair/member/get/visitor-of-member/by/${user.user_fair_member_id}/all`
+        `/api/cric/member/get/visitor-of-member/by/${user.user_cric_member_id}/all`
       );
       if (res.success) {
         setAllRegisterVisitor(res.data);
@@ -63,7 +63,7 @@ const RegisterVisitors = () => {
     <>
       {toggle ? (
         <div className='profile-right-side px-3 py-3 mb-2'>
-          <div className='d-flex align-items-center justify-content-between'>
+          <div className='d-flex align-items-center justify-content-betcricen'>
             <h5>Add New Visitor</h5>
             <div
               onClick={() => setToggle(false)}
@@ -82,7 +82,7 @@ const RegisterVisitors = () => {
         </div>
       ) : (
         <div className='profile-right-side px-3 py-3 mb-2'>
-          <div className='d-flex align-items-center justify-content-between'>
+          <div className='d-flex align-items-center justify-content-betcricen'>
             <h5>Registered Visitors</h5>
             <div
               onClick={() => setToggle(true)}

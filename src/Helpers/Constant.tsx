@@ -1,12 +1,12 @@
-export const BaseUrl: string = 'https://bttf-server.toab.services';
+export const BaseUrl: string = 'https://bttf-server.criclive.services';
 // export const BaseUrl: string = 'http://192.168.0.237:5005';
-// export const BaseUrl: string = 'https://toab.services';
+// export const BaseUrl: string = 'https://criclive.services';
 // export const BaseUrl: string = 'http://192.168.0.236:5005'; //rahad_diu
 
 // export const imgUrl: string =
-//   'https://toab.blob.core.windows.net/container1/uploads';
+//   'https://criclive.blob.core.windows.net/container1/uploads';
 export const imgUrl: string =
-  'https://m360ict.s3.ap-south-1.amazonaws.com/toab';
+  'https://m360ict.s3.ap-south-1.amazonaws.com/criclive';
 
 //======== Auth context helper ========//
 export const SET_SIGNUP_DATA = 'SET_SIGNUP_DATA';

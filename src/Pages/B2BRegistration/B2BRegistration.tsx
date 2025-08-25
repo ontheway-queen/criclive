@@ -26,7 +26,7 @@ interface inputForm {
   b2b_department: string;
   b2b_designation: string;
   b2b_date_of_birth: string;
-  b2b_website: string;
+  b2b_cricbsite: string;
   b2b_address: string;
   b2b_address_line_2: string;
   b2b_address_line_3: string;
@@ -162,7 +162,7 @@ const B2BRegistration = () => {
           type: B2B_USER_SUCCESS,
           payload: res.data,
         });
-        setCookie(null, 'toab_fair', res.token);
+        setCookie(null, 'criclive_cric', res.token);
         setIsLoading?.(false);
         navigate('/b2b/profile');
       } else {
@@ -192,14 +192,14 @@ const B2BRegistration = () => {
 
             <div className='login-form'>
               <div>
-                <h5 style={{ color: 'red', fontWeight: 'bold' }}>
+                <h5 style={{ color: 'red', fontcricight: 'bold' }}>
                   $25O Facilities
                 </h5>
                 <div className='ms-4 mb-4'>
                   <ul>
                     <li>3 Days Accomadation</li>
                     <li>1 Day B2B Session</li>
-                    <li>Gala Dinner Welcome</li>
+                    <li>Gala Dinner criclcome</li>
                     <li>Gala Dinner Closing</li>
                     <li>All Transportation(Hotel - Venue)</li>
                   </ul>
@@ -364,14 +364,14 @@ const B2BRegistration = () => {
                   </div>
                   <div className='col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5'>
                     <div>
-                      <label className='col-form-label'>Website</label>
+                      <label className='col-form-label'>cricbsite</label>
                       <span className='require'>*</span>
                       <div>
                         <input
                           type='text'
-                          {...register('b2b_website')}
+                          {...register('b2b_cricbsite')}
                           className='form-control'
-                          placeholder='Website'
+                          placeholder='cricbsite'
                           required
                         />
                       </div>
@@ -917,7 +917,7 @@ const B2BRegistration = () => {
                   <div className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-100'>
                     <div>
                       <label className='col-form-label'>
-                        Have you ever been a Hosted Buyer at WE in the past?{' '}
+                        Have you ever been a Hosted Buyer at cric in the past?{' '}
                       </label>
                       <span className='require'>*</span>
                       <div>

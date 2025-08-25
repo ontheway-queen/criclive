@@ -20,7 +20,7 @@
 }
 .profile-right-info ul li span {
   width: 25%;
-  font-weight: 600;
+  font-cricight: 600;
   font-size: 1rem;
 }
 .profile-right-info ul li p {
@@ -75,9 +75,9 @@
 
 .approved {
   color: green;
-  font-weight: bold;
+  font-cricight: bold;
 }
 .pending {
   color: #f57f17;
-  font-weight: bold;
+  font-cricight: bold;
 }

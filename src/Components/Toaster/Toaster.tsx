@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2';
+import Swal from 'scricetalert2';
 
 const Toaster = () => {
   const Toast: any = Swal.mixin({

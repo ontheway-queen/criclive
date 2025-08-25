@@ -17,7 +17,7 @@ export interface IVisitorUser {
   visitor_photo?: string;
   visitor_profession?: string;
   visitor_type?: string;
-  visitor_website?: string;
+  visitor_cricbsite?: string;
   visitor_zip_code?: string;
 }
 

@@ -38,7 +38,7 @@ const BookYourSpace = () => {
   // async function loadData() {
   //   setLoading(true);
   //   const res = await fetcher.get(
-  //     `/api/fair/member/get/company/info/for/registation/${companyNumber}`
+  //     `/api/cric/member/get/company/info/for/registation/${companyNumber}`
   //   );
   //   if (res.success) {
   //     setTimeout(() => {
@@ -54,7 +54,7 @@ const BookYourSpace = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://toab.services/api/v1/public/member/${companyNumber}`
+        `https://criclive.services/api/v1/public/member/${companyNumber}`
       );
 
       if (response.data.success) {
@@ -80,20 +80,20 @@ const BookYourSpace = () => {
     }
     data.stalls = JSON.stringify(stalls);
 
-    data.user_fair_member_company_name =
-      data.user_fair_member_company_name || companyName;
+    data.user_cric_member_company_name =
+      data.user_cric_member_company_name || companyName;
 
-    data.user_fair_member_company_address =
-      data.user_fair_member_company_address || address;
+    data.user_cric_member_company_address =
+      data.user_cric_member_company_address || address;
 
-    // data.user_fair_member_company_website =
-    //   data.user_fair_member_company_website || company_website;
+    // data.user_cric_member_company_cricbsite =
+    //   data.user_cric_member_company_cricbsite || company_cricbsite;
 
-    data.user_fair_member_company_telephone =
-      data.user_fair_member_company_telephone || mobileNumber;
+    data.user_cric_member_company_telephone =
+      data.user_cric_member_company_telephone || mobileNumber;
 
-    data.user_fair_member_company_email =
-      data.user_fair_member_company_email || email;
+    data.user_cric_member_company_email =
+      data.user_cric_member_company_email || email;
 
     if (!stalls.length) {
       Toast.fire({
@@ -103,7 +103,7 @@ const BookYourSpace = () => {
       setIsLoading?.(false);
       return;
     }
-    if (data.user_fair_member_password !== confirmPassword) {
+    if (data.user_cric_member_password !== confirmPassword) {
       Toast.fire({
         icon: 'error',
         title: `Password does not match`,
@@ -111,7 +111,7 @@ const BookYourSpace = () => {
       setIsLoading?.(false);
       return;
     }
-    if (data.user_fair_member_password.length < 8) {
+    if (data.user_cric_member_password.length < 8) {
       Toast.fire({
         icon: 'error',
         title: `Password must be at least 8 characters`,
@@ -120,8 +120,8 @@ const BookYourSpace = () => {
       return;
     }
     if (
-      data.user_fair_member_contact_number.startsWith('01') &&
-      data.user_fair_member_contact_number === 11
+      data.user_cric_member_contact_number.startsWith('01') &&
+      data.user_cric_member_contact_number === 11
     ) {
       Toast.fire({
         icon: 'error',
@@ -148,19 +148,19 @@ const BookYourSpace = () => {
     });
     if (companyLogo.companyLogoPhoto) {
       formData.append(
-        'user_fair_member_company_logo',
+        'user_cric_member_company_logo',
         companyLogo.companyLogoPhoto
       );
     }
     if (companyLogo.companyLogoAi) {
       formData.append(
-        'user_fair_member_company_logo_ai',
+        'user_cric_member_company_logo_ai',
         companyLogo.companyLogoAi
       );
     }
 
     const res = await fetcher.post({
-      url: `/api/auth/fair-member/register`,
+      url: `/api/auth/cric-member/register`,
       body: formData,
     });
 
@@ -173,7 +173,7 @@ const BookYourSpace = () => {
         type: AUTH_USER_SUCCESS,
         payload: res.data,
       });
-      setCookie(null, 'toab_fair', res.token);
+      setCookie(null, 'criclive_cric', res.token);
       setIsLoading?.(false);
       reset();
       navigate('/profile');
@@ -199,7 +199,7 @@ const BookYourSpace = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className='register-top'>
               <div className='register-top-div'>
-                <h3>WE Fair </h3>
+                <h3>cric cric </h3>
               </div>
               <div className='register-top-form-card '>
                 <Row className='d-block d-md-flex align-items-center'>
@@ -241,7 +241,7 @@ const BookYourSpace = () => {
                                 onChange={(e: any) =>
                                   setCompanyNumber(e.target.value)
                                 }
-                                placeholder='TOAB membership number'
+                                placeholder='criclive membership number'
                               />
 
                               <div>

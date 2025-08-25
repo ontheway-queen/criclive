@@ -27,7 +27,7 @@ const Login = () => {
     try {
       setIsLoading?.(true);
       const res = await fetcher.post({
-        url: '/api/auth/fair-member/login',
+        url: '/api/auth/cric-member/login',
         contentType: 'application/json',
         body: data,
       });
@@ -41,7 +41,7 @@ const Login = () => {
           type: AUTH_USER_SUCCESS,
           payload: res.data,
         });
-        setCookie(null, 'toab_fair', res.token);
+        setCookie(null, 'criclive_cric', res.token);
         setIsLoading?.(false);
         navigate('/profile');
       } else {
@@ -91,7 +91,7 @@ const Login = () => {
                       type={passwordType}
                     />
                   </div>
-                  <div className=' pt-3 d-flex align-items-center justify-content-between'>
+                  <div className=' pt-3 d-flex align-items-center justify-content-betcricen'>
                     <div className=' d-flex align-items-center'>
                       <input
                         type='checkbox'

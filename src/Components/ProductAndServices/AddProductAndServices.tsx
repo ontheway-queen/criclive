@@ -15,8 +15,8 @@ const AddProductAndServices = () => {
 
   const onSubmit = async (data: any) => {
     setLoading(true);
-    data.user_fair_member_id = user.user_fair_member_id;
-    data.user_fair_member_company_id = user.user_fair_member_company_id;
+    data.user_cric_member_id = user.user_cric_member_id;
+    data.user_cric_member_company_id = user.user_cric_member_company_id;
 
     if (!files.length) {
       Toast.fire({
@@ -36,7 +36,7 @@ const AddProductAndServices = () => {
     });
 
     const res = await fetcher.post({
-      url: `/api/fair/add-product/into-fair-member`,
+      url: `/api/cric/add-product/into-cric-member`,
       body: formData,
     });
 
@@ -67,14 +67,14 @@ const AddProductAndServices = () => {
                 <input
                   type='text'
                   className='form-control '
-                  {...register('fair_member_product_name')}
+                  {...register('cric_member_product_name')}
                   placeholder='Enter Product Name'
                   id='productName'
                   required
                 />
               </div>
               <div className='form-group col-md-6 mb-3'>
-                <label className='d-flex justify-content-between'>
+                <label className='d-flex justify-content-betcricen'>
                   <div className='w-50'>
                     <span className='special_price'></span>Product{' '}
                     <span className='price_range d-none'>Start</span> Price{' '}
@@ -84,7 +84,7 @@ const AddProductAndServices = () => {
                 <input
                   type='number'
                   className='form-control '
-                  {...register('fair_member_product_price')}
+                  {...register('cric_member_product_price')}
                   placeholder='1000'
                   id='price_start'
                 />
@@ -92,13 +92,13 @@ const AddProductAndServices = () => {
 
               <div className='form-group col-md-6 mb-3'>
                 <label className='special_price'>Special Price</label>
-                <div className='d-flex justify-content-between align-items-center'>
+                <div className='d-flex justify-content-betcricen align-items-center'>
                   <input
                     type='number'
                     className='form-control special_price'
                     placeholder='500'
                     id='special_price'
-                    {...register('fair_member_special_product_price')}
+                    {...register('cric_member_special_product_price')}
                   />
                 </div>
               </div>
@@ -109,7 +109,7 @@ const AddProductAndServices = () => {
                 </label>
                 <select
                   className='form-select'
-                  {...register('fair_member_product_category')}
+                  {...register('cric_member_product_category')}
                 >
                   <option value='Software Development/Customization'>
                     Software Development/Customization
@@ -123,8 +123,8 @@ const AddProductAndServices = () => {
                   </option>
                   <option value='R&amp;D Services'>R&amp;D Services</option>
                   <option value='2D, 3D Animations'>2D, 3D Animations</option>
-                  <option value='E-commerce/Web services'>
-                    E-commerce/Web services
+                  <option value='E-commerce/cricb services'>
+                    E-commerce/cricb services
                   </option>
                   <option value='System Integration'>System Integration</option>
                   <option value='Product distributor/Reseller'>
@@ -157,7 +157,7 @@ const AddProductAndServices = () => {
                   className='form-control'
                   placeholder='Enter Product Url'
                   id='product_url'
-                  {...register('fair_member_product_url')}
+                  {...register('cric_member_product_url')}
                 />
               </div>
 
@@ -169,7 +169,7 @@ const AddProductAndServices = () => {
                   className='form-control '
                   placeholder='Enter Product Description'
                   id='description'
-                  {...register('fair_member_product_description')}
+                  {...register('cric_member_product_description')}
                 ></textarea>
                 <div className='text-end'>
                   <small id='description_msg'>

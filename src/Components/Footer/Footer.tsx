@@ -8,7 +8,7 @@ import { MdLocationOn } from 'react-icons/md';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-import WE from '../../images/we.png';
+import cric from '../../images/cric.png';
 const Footer = () => {
   let year = new Date().getFullYear();
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
                 <Col xs={12} md={4}>
                   <div className='footer-widget'>
                     <a className='footer-logo' href='/'>
-                      <img className='img-fluid' src={WE} alt='' />
+                      <img className='img-fluid' src={cric} alt='' />
                     </a>
                   </div>
                 </Col>
@@ -67,18 +67,7 @@ const Footer = () => {
                                 </span>
                               </div>
                             </li>
-                            {/* <li>
-                              <div className='info-icon'>
-                                <HiOutlineMail className='i' />
-                              </div>
-                              <div className='info-text'>
-                                <span>
-                                  <Link to='https://weforumbd.org/'>
-                                    weforumbd
-                                  </Link>
-                                </span>
-                              </div>
-                            </li> */}
+                  
                             <li>
                               <div className='info-icon'>
                                 <MdLocationOn className='i' />
@@ -123,7 +112,7 @@ const Footer = () => {
                 <div className='col-lg-4 col-md-4  align-self-center'>
                   <div className='copyright-text'>
                     <div className='copyright-text'>
-                      <p>{year} Copyright by WE. All Rights Reserved</p>
+                      <p>{year} Copyright by cric. All Rights Reserved</p>
                     </div>
                   </div>
                 </div>

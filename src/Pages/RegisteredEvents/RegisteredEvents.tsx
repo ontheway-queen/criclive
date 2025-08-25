@@ -29,7 +29,7 @@ const RegisteredEvents = () => {
     try {
       (async () => {
         const res = await fetcher.get(
-          `/api/fair/event/get/all/join-event/${visitorUser?.visitor_id}/all`
+          `/api/cric/event/get/all/join-event/${visitorUser?.visitor_id}/all`
         );
 
         if (res.success) {
@@ -48,7 +48,7 @@ const RegisteredEvents = () => {
   const handelCancelEvent = async () => {
     try {
       const res = await fetcher.delete(
-        `/api/fair/event/get/all/join-event/${visitorUser?.visitor_id}/${eventId}`
+        `/api/cric/event/get/all/join-event/${visitorUser?.visitor_id}/${eventId}`
       );
       if (res.success) {
         Toast.fire({
@@ -56,7 +56,7 @@ const RegisteredEvents = () => {
           title: res.message,
         });
         const filterData = allRegisterEvents.filter(
-          (sEvent) => sEvent.fair_event_id !== eventId
+          (sEvent) => sEvent.cric_event_id !== eventId
         );
         setAllRegisterEvents(filterData);
         setEventId(0);
@@ -98,7 +98,7 @@ const RegisteredEvents = () => {
                       return (
                         <tr
                           className='text-center'
-                          key={sRegisterEvent.fair_event_id}
+                          key={sRegisterEvent.cric_event_id}
                         >
                           <td>
                             {moment(sRegisterEvent.event_date).format(
@@ -122,7 +122,7 @@ const RegisteredEvents = () => {
                             <IoIosCloseCircleOutline
                               onClick={() => {
                                 handleShow();
-                                setEventId(sRegisterEvent.fair_event_id);
+                                setEventId(sRegisterEvent.cric_event_id);
                               }}
                               color='red'
                               size={25}

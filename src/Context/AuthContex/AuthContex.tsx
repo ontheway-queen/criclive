@@ -17,17 +17,17 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     (async () => {
-      const { toab_fair } = parseCookies();
-      if (toab_fair) {
+      const { criclive_cric } = parseCookies();
+      if (criclive_cric) {
         setIsLoading(true);
         try {
           const { payload } = await jose.jwtVerify(
-            toab_fair,
+            criclive_cric,
             new TextEncoder().encode('FaTO5b$eCzw!Ukw8^d*UUf*JABbeIrR')
           );
 
           const { data } = await fetcher.get(
-            `/api/fair/member/get/information/${payload.user_fair_member_id}`
+            `/api/cric/member/get/information/${payload.user_cric_member_id}`
           );
 
           dispatch({ type: AUTH_USER_SUCCESS, payload: data });

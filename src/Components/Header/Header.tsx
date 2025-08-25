@@ -20,7 +20,7 @@
 //   const { b2bUser, dispatch: B2BAuthDispatch } = B2BAuthContext();
 
 //   const handleLogout = () => {
-//     destroyCookie(null, 'toab_fair');
+//     destroyCookie(null, 'criclive_cric');
 //     authDispatch?.({
 //       type: AUTH_USER_FAILED,
 //     });
@@ -32,7 +32,7 @@
 //     });
 //   };
 //   const handleLogoutB2B = () => {
-//     destroyCookie(null, 'toab_fair');
+//     destroyCookie(null, 'criclive_cric');
 //     authDispatch?.({
 //       type: AUTH_USER_FAILED,
 //     });
@@ -78,7 +78,7 @@
 //                         <Link to='#'>About BITTE</Link>
 //                       </li>
 //                       <li>
-//                         <Link to='#'>About TOAB</Link>
+//                         <Link to='#'>About criclive</Link>
 //                       </li>
 //                       <li>
 //                         <Link to='#'>Exhibition</Link>
@@ -137,7 +137,7 @@
 //                     <Link to='#'>BTTF 2024</Link>
 //                   </li>
 
-//                   {user?.user_fair_member_id || visitorUser?.visitor_id ? (
+//                   {user?.user_cric_member_id || visitorUser?.visitor_id ? (
 //                     ''
 //                   ) : (
 //                     <li className='change-color'>
@@ -151,7 +151,7 @@
 //             <Nav className='ms-auto'>
 //               {b2bUser?.b2b_id ||
 //               b2bUser?.b2b_id ||
-//               user?.user_fair_member_id ? (
+//               user?.user_cric_member_id ? (
 //                 <>
 //                   <Link
 //                     to={b2bUser?.b2b_id ? '/b2b/profile' : '/profile'}
@@ -244,7 +244,7 @@
 //             <Nav className='ms-auto'>
 //               {visitorUser?.visitor_id ||
 //               visitorUser?.visitor_id ||
-//               user?.user_fair_member_id ? (
+//               user?.user_cric_member_id ? (
 //                 <>
 //                   <Link
 //                     to={
@@ -367,7 +367,7 @@ const Header = () => {
   const { b2bUser, dispatch: B2BAuthDispatch } = B2BAuthContext();
 
   const handleLogout = () => {
-    destroyCookie(null, 'toab_fair');
+    destroyCookie(null, 'criclive_cric');
     authDispatch?.({
       type: AUTH_USER_FAILED,
     });
@@ -380,7 +380,7 @@ const Header = () => {
   };
 
   const handleLogoutB2B = () => {
-    destroyCookie(null, 'toab_fair');
+    destroyCookie(null, 'criclive_cric');
     authDispatch?.({
       type: AUTH_USER_FAILED,
     });
@@ -390,7 +390,7 @@ const Header = () => {
   };
 
   const renderLoginButtons = () => {
-    if (b2bUser?.b2b_id || user?.user_fair_member_id) {
+    if (b2bUser?.b2b_id || user?.user_cric_member_id) {
       return (
         <>
           <Link
@@ -506,7 +506,7 @@ const Header = () => {
         <Container fluid className='custom-container'>
           <a href='/'>
             <img
-              src='/assets/we.png'
+              src='/assets/cric.png'
               alt=''
               width={80}
               height={70}
@@ -529,7 +529,7 @@ const Header = () => {
                     </Link>
                     {/* <ul className='sub-menu'>
                       <li>
-                        <Link to='#'>About WE</Link>
+                        <Link to='#'>About cric</Link>
                       </li>
                     </ul> */}
                   </li>

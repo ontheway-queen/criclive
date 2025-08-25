@@ -19,7 +19,7 @@ const PrivateRoute = ({ component }: PropType) => {
       </div>
     );
   }
-  if (user?.user_fair_member_id) {
+  if (user?.user_cric_member_id) {
     return component;
   } else {
     return <Navigate to='/login' />;

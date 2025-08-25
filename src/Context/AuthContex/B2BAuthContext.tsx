@@ -20,15 +20,15 @@ const B2BAuthContextProvider = ({
 
   useEffect(() => {
     (async () => {
-      const { toab_fair } = parseCookies();
+      const { criclive_cric } = parseCookies();
 
-      console.log(toab_fair);
+      console.log(criclive_cric);
 
-      if (toab_fair) {
+      if (criclive_cric) {
         setIsLoading(true);
         try {
           const { payload } = await jose.jwtVerify(
-            toab_fair,
+            criclive_cric,
             new TextEncoder().encode('FaTO5b$eCzw!Ukw8^d*UUf*JABbeIrR')
           );
 

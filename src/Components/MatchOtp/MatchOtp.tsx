@@ -19,7 +19,7 @@ const MatchOtp = () => {
 
   const onSubmit = async (data: any) => {
     data.email = email;
-    data.type = 'forget_fair';
+    data.type = 'forget_cric';
 
     const res = await fetcher.post({
       url: '/api/atab/common/match-email-otp',
@@ -32,7 +32,7 @@ const MatchOtp = () => {
         icon: 'success',
         title: res.message,
       });
-      localStorage.setItem('fair_forget_token', res.token);
+      localStorage.setItem('cric_forget_token', res.token);
       navigate(`/new-password?email=${data.email}`);
       setLoading(false);
     } else {

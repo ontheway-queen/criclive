@@ -38,7 +38,7 @@ const B2BProfile = () => {
   const { b2bUser, dispatch: b2bAuthDispatch } = B2BAuthContext();
   // console.log(b2bUser);
   const handleLogout = () => {
-    destroyCookie(null, 'toab_fair');
+    destroyCookie(null, 'criclive_cric');
     authDispatch?.({
       type: AUTH_USER_FAILED,
     });
@@ -60,7 +60,7 @@ const B2BProfile = () => {
 
     try {
       const res = await fetch(
-        `${BaseUrl}/api/fair/member/b2b/${b2bUser.b2b_id}`,
+        `${BaseUrl}/api/cric/member/b2b/${b2bUser.b2b_id}`,
         {
           method: 'PUT',
           body: formData,
@@ -144,7 +144,7 @@ const B2BProfile = () => {
                   </div>
                 </div>
                 <div className='flex-grow-1 mt-3 mt-sm-5'>
-                  <div className='pt-1 gap-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-center align-items-sm-start align-items-md-end mx-4'>
+                  <div className='pt-1 gap-4 d-flex flex-column flex-md-row justify-content-start justify-content-md-betcricen align-items-center align-items-sm-start align-items-md-end mx-4'>
                     <div className='user-profile-info'>
                       <h4 className='mb-4 fw-bold'>
                         {b2bUser?.b2b_first_name} {b2bUser?.b2b_last_name}

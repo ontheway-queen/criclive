@@ -29,7 +29,7 @@ const VisitorEditProfile = () => {
 
     try {
       const res = await fetcher.put({
-        url: '/api/fair/visitor/visitor-info-update',
+        url: '/api/cric/visitor/visitor-info-update',
         body: formData,
       });
 
@@ -223,15 +223,15 @@ const VisitorEditProfile = () => {
             </div>
             <div className='row mb-3'>
               <div className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6'>
-                <label className='control-label'>Website</label>
+                <label className='control-label'>cricbsite</label>
                 <div className='col-lg-12padding_right_0'>
                   <input
                     type='text'
-                    placeholder='Enter Website'
-                    {...register('visitor_website')}
-                    id='website'
+                    placeholder='Enter cricbsite'
+                    {...register('visitor_cricbsite')}
+                    id='cricbsite'
                     className='form-control'
-                    defaultValue={visitorUser.visitor_website}
+                    defaultValue={visitorUser.visitor_cricbsite}
                   />
                 </div>
               </div>

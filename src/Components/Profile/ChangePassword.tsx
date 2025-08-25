@@ -14,7 +14,7 @@ const ChangePassword = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const onSubmit = async (data: any) => {
-    data.user_id = user.user_fair_member_id;
+    data.user_id = user.user_cric_member_id;
     if (data.new_password !== confirmPassword) {
       Toast.fire({
         icon: 'error',
@@ -32,7 +32,7 @@ const ChangePassword = () => {
       return;
     }
     const res = await fetcher.post({
-      url: `/api/auth/fair-member/change/password`,
+      url: `/api/auth/cric-member/change/password`,
       contentType: 'application/json',
       body: data,
     });

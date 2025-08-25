@@ -34,7 +34,7 @@ const SpaceRequirements = () => {
       <div className='profile-right-side px-3 py-3 mt-4 '>
         <h5>Billing information</h5>
 
-        <div className='d-block d-md-flex align-items-center justify-content-between'>
+        <div className='d-block d-md-flex align-items-center justify-content-betcricen'>
           <div className='d-flex align-items-center gap-3'>
             <p>payment</p>
             <div className='d-flex align-items-center gap-2'>

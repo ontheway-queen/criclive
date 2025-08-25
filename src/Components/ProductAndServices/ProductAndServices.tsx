@@ -34,7 +34,7 @@ const ProductAndServices = () => {
     try {
       (async () => {
         const data = await fetcher.get(
-          `/api/fair/get/all/fair-member-product/by/${user.user_fair_member_id}/all`
+          `/api/cric/get/all/cric-member-product/by/${user.user_cric_member_id}/all`
         );
         if (data.success) {
           setAllProducts(data.data);
@@ -46,12 +46,12 @@ const ProductAndServices = () => {
     } catch {
       setLoading(false);
     }
-  }, [user.user_fair_member_id]);
+  }, [user.user_cric_member_id]);
 
   const handelDelete = async () => {
     if (productId) {
       const res = await fetcher.delete(
-        `/api/fair/delete/fair-member-product/${productId}`
+        `/api/cric/delete/cric-member-product/${productId}`
       );
       if (res.success) {
         Toast.fire({
@@ -59,7 +59,7 @@ const ProductAndServices = () => {
           title: `${res.message}`,
         });
         const filterProduct = allProducts.filter(
-          (sProduct) => sProduct.fair_member_product_id !== productId
+          (sProduct) => sProduct.cric_member_product_id !== productId
         );
         setAllProducts(filterProduct);
         setShow(!show);
@@ -75,7 +75,7 @@ const ProductAndServices = () => {
     <>
       <div className='profile-right-side px-3 py-3'>
         {toggle ? (
-          <div className='product-header  d-flex align-items-center justify-content-between '>
+          <div className='product-header  d-flex align-items-center justify-content-betcricen '>
             <h4>Add new Product &amp; Service</h4>
             <div onClick={() => setToggle(false)} className='pointer'>
               <p
@@ -92,7 +92,7 @@ const ProductAndServices = () => {
             </div>
           </div>
         ) : (
-          <div className='d-flex  align-items-center justify-content-between'>
+          <div className='d-flex  align-items-center justify-content-betcricen'>
             <h4>Product and Services </h4>
             <div className='d-flex align-items-center gap-3'>
               <div>
@@ -143,27 +143,27 @@ const ProductAndServices = () => {
                       <>
                         {allProducts.map((sProduct) => {
                           return (
-                            <tr key={sProduct.fair_member_product_id}>
+                            <tr key={sProduct.cric_member_product_id}>
                               <td className='text-center'>
-                                {sProduct.fair_member_product_name}
+                                {sProduct.cric_member_product_name}
                               </td>
                               <td className='text-center'>
-                                {sProduct.fair_member_product_category}
+                                {sProduct.cric_member_product_category}
                               </td>
                               <td className='text-center'>
-                                {sProduct.fair_member_product_price}
+                                {sProduct.cric_member_product_price}
                               </td>
                               <td className='text-center'>
                                 <p
                                   className={
-                                    sProduct.user_fair_member_product_status ===
+                                    sProduct.user_cric_member_product_status ===
                                     'approved'
                                       ? 'approved'
                                       : 'pending'
                                   }
                                 >
                                   {' '}
-                                  {sProduct.user_fair_member_product_status}
+                                  {sProduct.user_cric_member_product_status}
                                 </p>
                               </td>
                               <td className='text-center'>
@@ -172,7 +172,7 @@ const ProductAndServices = () => {
                                   onClick={(e: any) => {
                                     handleClick(e);
                                     setProductID(
-                                      sProduct.fair_member_product_id
+                                      sProduct.cric_member_product_id
                                     );
                                   }}
                                 />

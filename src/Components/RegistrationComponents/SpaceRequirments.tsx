@@ -21,7 +21,7 @@ const SpaceRequirements = ({ setStalls, stalls }: any) => {
   useEffect(() => {
     (async () => {
       const res = await fetcher.get(
-        `/api/fair/stall/get/all/status/hall-name/all/all`
+        `/api/cric/stall/get/all/status/hall-name/all/all`
       );
       if (res.success) {
         setAllStalls(res.data);
@@ -32,7 +32,7 @@ const SpaceRequirements = ({ setStalls, stalls }: any) => {
   return (
     <>
       <div className='register-top'>
-        <div className='register-top-div d-flex align-items-center justify-content-between'>
+        <div className='register-top-div d-flex align-items-center justify-content-betcricen'>
           <h3>Space Requirements </h3>
           {/* <h5 onClick={() => setShowImage(true)} className='pointer'>
             Venue layout
@@ -42,48 +42,48 @@ const SpaceRequirements = ({ setStalls, stalls }: any) => {
           <Row xxl={6} xs={3} md={5}>
             {allStalls.map((stall) => {
               return (
-                <Col key={stall.fair_stall_id}>
+                <Col key={stall.cric_stall_id}>
                   <div
                     onClick={() => {
                       const newStatusStall = allStalls.filter(
-                        (s) => s.fair_stall_id === stall.fair_stall_id
+                        (s) => s.cric_stall_id === stall.cric_stall_id
                       );
 
-                      if (stall.fair_stall_available_status === 'available') {
-                        setStalls([...stalls, stall.fair_stall_id]);
-                        newStatusStall[0].fair_stall_available_status =
+                      if (stall.cric_stall_available_status === 'available') {
+                        setStalls([...stalls, stall.cric_stall_id]);
+                        newStatusStall[0].cric_stall_available_status =
                           'select';
                       } else if (
-                        newStatusStall[0].fair_stall_available_status ===
+                        newStatusStall[0].cric_stall_available_status ===
                         'select'
                       ) {
-                        newStatusStall[0].fair_stall_available_status =
+                        newStatusStall[0].cric_stall_available_status =
                           'available';
                         const newStall = stalls.filter(
-                          (st: any) => st !== stall.fair_stall_id
+                          (st: any) => st !== stall.cric_stall_id
                         );
                         setStalls(newStall);
                       } else {
                         handleShow();
-                        setStatus(stall.fair_stall_available_status);
+                        setStatus(stall.cric_stall_available_status);
                       }
                     }}
                     className={
-                      stall.fair_stall_available_status === 'select'
+                      stall.cric_stall_available_status === 'select'
                         ? 'select-item'
-                        : stall.fair_stall_available_status === 'available'
+                        : stall.cric_stall_available_status === 'available'
                         ? 'select__item'
                         : 'unavailable-item'
                     }
                   >
-                    <p>{stall.fair_stall_name}</p>
+                    <p>{stall.cric_stall_name}</p>
 
                     <span style={{ fontSize: '13px' }}>
-                      {stall.fair_stall_hall_name} hall
+                      {stall.cric_stall_hall_name} hall
                     </span>
                     <br />
                     <span style={{ fontSize: '13px' }}>
-                      {stall.fair_stall_available_status}
+                      {stall.cric_stall_available_status}
                     </span>
                   </div>
                 </Col>

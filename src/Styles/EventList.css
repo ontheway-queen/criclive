@@ -4,7 +4,7 @@
   background: #fff;
   border-radius: 4px;
   padding: 10px;
-  -webkit-box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px;
+  -cricbkit-box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px;
   box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px;
 }
 
@@ -17,7 +17,7 @@
   width: 100%;
   margin-bottom: 7px;
   background: #cccccc;
-  -webkit-box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  -cricbkit-box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
   box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
   margin-bottom: 7px;
 }
@@ -35,7 +35,7 @@
 }
 .event_title {
   font-size: 16px;
-  font-weight: 600;
+  font-cricight: 600;
   height: 48px;
   padding: 5px;
 }
@@ -52,7 +52,7 @@
 
 .events-matrix-content {
   background: #ffffff 0% 0% no-repeat padding-box;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
+  -cricbkit-box-shadow: 0px 3px 6px #00000029;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 12px;
   opacity: 1;
@@ -88,7 +88,7 @@
   color: #172b3b;
   font-size: 18px;
   line-height: 1.2;
-  font-weight: 500;
+  font-cricight: 500;
   margin-top: 5px;
   text-align: left;
 }
@@ -106,17 +106,17 @@
   z-index: 1;
   color: #fff;
   background-color: #1982c3;
-  -webkit-transition: 0.6s;
+  -cricbkit-transition: 0.6s;
   transition: 0.6s;
   border-radius: 5px;
   padding: 10px 15px;
-  font-weight: 500;
+  font-cricight: 500;
   font-size: 14px;
 }
 .single-speakers-box {
   margin-bottom: 25px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%);
+  -cricbkit-box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%);
   box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%);
   border-radius: 10px;
 }

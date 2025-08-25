@@ -88,7 +88,7 @@ const VisitorRegistration = () => {
           type: AUTH_VISITOR_USER_SUCCESS,
           payload: res.data,
         });
-        setCookie(null, 'toab_fair', res.token);
+        setCookie(null, 'criclive_cric', res.token);
         setIsLoading?.(false);
         navigate('/visitor/profile');
       } else {

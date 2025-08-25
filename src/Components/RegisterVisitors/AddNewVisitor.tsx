@@ -19,11 +19,11 @@ const AddNewVisitor: React.FC<AddNewVisitorProps> = ({ onAddVisitor }) => {
   const onSubmit = async (data: any) => {
     setLoading(true);
     data.visitor_type = 'visitor';
-    data.visitor_created_by = user.user_fair_member_id;
+    data.visitor_created_by = user.user_cric_member_id;
 
     try {
       const res = await fetcher.post({
-        url: '/api/fair/member/create/visitor',
+        url: '/api/cric/member/create/visitor',
         contentType: 'application/json',
         body: data,
       });
